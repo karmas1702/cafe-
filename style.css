@@ -1,0 +1,962 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Arima:wght@400;500;600&family=Be+Vietnam+Pro:wght@400;700&family=Lilex:ital,wght@0,100..700;1,100..700&family=Oswald:wght@600;700&family=Dancing+Script:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Chicle&family=Lilex:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ====== BODY MAIN SECTION ==== */
+body, header, nav, main, footer, h1, h2, h3, p, div, img, ul, section, article, aside {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lilex', sans-serif;
+    background-color: #ffffff;
+    color: #331e03;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+a:focus-visible{
+    outline: 2px solid #331e03;
+    outline-offset: 2px;
+}
+
+/* ==== MAIN SECTION === */
+
+header{
+    width: 100%;
+    min-height: 100px;
+    padding: 15px 6%;
+    background-color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 3px 12px rgba(74, 48, 38, 0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+    width: 150px;
+    height: auto;
+    
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 0;
+    color: #331e03;
+    font-family: 'Lilex', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d7a86e;
+}
+
+/* HERO SECTION */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 620px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #5B3829;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    filter: brightness(55%);
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+
+    width: min(850px, 90%);
+    margin: 0 auto;
+    padding: 60px 20px;
+
+    text-align: center;
+    color: #FFFFFF;
+}
+.hero-text h1 {
+    font-family: 'Lilex' monospace;
+    font-size: clamp(32px, 5vw, 58px);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.65);
+    -webkit-text-stroke: 0.5px #FFF8EF;
+}
+
+.hero-text h2 {
+    font-family: 'Lilex', sans-serif;
+    font-size: clamp(15px, 2vw, 20px);
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: #FFF8EF;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-button {
+    display: inline-block;
+    margin: 8px;
+    padding: 14px 28px;
+
+    font-family: 'Lilex', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+
+    color: #FFFFFF;
+    background-color: #A7653F;
+    border: 2px solid #A7653F;
+    border-radius: 30px;
+
+    transition: background-color 0.3s ease, color 0.3s ease,
+                border-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-button:hover,
+.hero-button:focus-visible {
+    background-color: #FFF8EF;
+    color: #70452F;
+    border-color: #FFF8EF;
+    transform: translateY(-3px);
+}
+
+
+/* PAWFEE SECTION */
+
+.Pawfee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 3rem 2rem;
+    background-color: #ffffff;
+    font-family: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
+    color: #a0522d;
+}
+
+.Pawfee img {
+    flex: 0 0 200px;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #a0522d;
+    border-radius: 18px;
+}
+
+.Pawfee-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    min-width: 0;
+}
+
+.Pawfee-text h1 {
+    margin: 0 auto;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    color: #a0522d;
+}
+
+.Pawfee-text p {
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: left;
+    color: #a0522d;
+}
+
+.Pawfee-text .button {
+    align-self: center;
+    padding: 0.7rem 2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #a0522d;
+    border: 3px solid #a0522d;
+    border-radius: 999px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.Pawfee-text .button:hover,
+.Pawfee-text .button:focus-visible {
+    background-color: #ffffff;
+    color: #a0522d;
+    
+}
+/*============ ABOUT SECTION =========== */ 
+
+.our-story{
+    width: 100%;
+}
+
+.story-hero{
+    position: relative;
+    width: 100%;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #5B3829;
+}
+
+.story-hero-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.story-hero::before{
+    position:absolute;
+    inset: 0;
+    z-index: 1;
+    background:rgba(0,0,0,0.25);
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+    max-width: 1030px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.story-text::before {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    margin-bottom: 18px;
+    background-color: #c68b59;
+}
+.story-hero h1 {
+    position: relative;
+    margin: 0;
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+.story-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #5c4033;
+    text-align: left;
+     margin-top: 1.5em;
+}
+
+.story-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.story-text .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 32px;
+    padding: 16px 38px;
+
+    font-family: 'Lilex', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #ffffff;
+    background: linear-gradient(135deg, #c68b59, #a0522d);
+    border: 2px solid #a0522d;
+    border-radius: 999px;
+    box-shadow: 0 6px 16px rgba(160, 82, 45, 0.35);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+                background 0.25s ease, color 0.25s ease;
+}
+
+.story-text .button::before{
+    content: "\1F43E";
+    font-size: 1.5rem;
+}
+
+.story-text .button:hover,
+.story-text .button:focus-visible {
+    background: #ffffff;
+    color: #a0522d;
+    border-color: #a0522d;
+    box-shadow: 0 10px 22px rgba(160, 82, 45, 0.45);
+}
+
+.story-text .button:active {
+    box-shadow: 0 4px 10px rgba(160, 82, 45, 0.35);
+}
+
+/*====== GALLERY SECTION ====== */
+
+.cozy-space{
+    max-width: 11000px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.cozy-space h2{
+    margin-bottom: 1.5rem;
+    font-family: 'Arima', serif;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #331e03;
+}
+
+.gallery-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.gallery-row img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+.cozy-space .tagline {
+    margin-top: 2.5rem;
+    font-family: 'Arima', serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #331e03;
+}
+
+/* ===== SERVICES PAGE SECTION ===== */
+
+.Main-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: clamp(200px, 32vw, 340px);
+    overflow: hidden;
+    background-color: #5B3829;
+}
+
+.Main-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.Main-image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.Main-image h1 {
+    position: relative;
+    z-index: 2;
+    padding: 0 1rem;
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    font-size: clamp(2rem, 7vw, 4rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform:uppercase;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+.Main-Card {
+    width: min(1000px, 100% - 3rem);
+    margin: 2.5rem auto 0;
+}
+
+.Main-Card .leads {
+    max-width: 36rem;
+    margin: 0 auto 1.75rem;
+    font-family: 'Arima', serif;
+    font-size: 1.1rem;
+    font-variant: small-caps;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    text-align: center;
+    color: #331e03;
+}
+
+.Main-Card h2 {
+    margin-bottom: 1.5rem;
+    font-family: 'Arima', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    font-variant: small-caps;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: #331e03;
+}
+
+.service-cards {
+    --pets-img: none;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.8rem;
+    align-items: start;
+    width: min(1000px, 100% - 3rem);
+    margin: 0 auto 3rem;
+    padding-bottom: 3rem;
+    background: var(--pets-img) center bottom / contain no-repeat;
+}
+
+.service-cards > article {
+    grid-column: span 2;
+    min-height: 10rem;
+    padding: 1.5rem 1.25rem 1.75rem;
+    text-align: center;
+    background-color: #d9d9d9;
+    color: #331e03;
+    border-radius: 18px;
+}
+
+.service-cards > article:nth-child(n+4) {
+    grid-column: span 3;
+}
+
+.service-cards > article:nth-child(even) {
+    background-color: #a0522d;
+    color: #ffffff;
+}
+
+.service-cards > article:nth-child(odd) {
+    margin-top: 0.4rem;
+}
+
+.service-cards h3 {
+    margin-bottom: 1rem;
+    font-family: 'Arima', serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.service-cards p {
+    font-family: 'Be Vietnam Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+
+/* ====== CONTACT PAGE ===== */
+.contact-page {
+    width: min(1000px, 100% - 3rem);
+    margin: 2.5rem auto 4rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-book {
+    margin-bottom: 1.75rem;
+    font-family: 'Arima', serif;
+    font-size: 1.05rem;
+    color: #331e03;
+}
+
+.contact-book a {
+    color: #a0522d;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.contact-book a:hover {
+    color: #70452f;
+}
+
+.contact-block {
+    margin-top: 2.25rem;
+}
+
+.contact-block h2 {
+    margin-bottom: 0.75rem;
+    font-family: 'Be Vietnam Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #331e03;
+}
+
+.contact-block p {
+    font-family: 'Arima', serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #331e03;
+}
+
+.contact-block p + p {
+    margin-top: 0.6rem;
+}
+
+.contact-block a {
+    color: inherit;
+}
+
+.contact-block a:hover {
+    color: #a0522d;
+}
+
+.contact-invite {
+    max-width: 20rem;
+    font-family: 'Arima', serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #331e03;
+}
+
+.contact-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 1rem 0 1.5rem;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    font-family: 'Be Vietnam Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #331e03;
+}
+
+.social a {
+    display: inline-flex;
+    color: #331e03;
+    transition: color 0.2s ease;
+}
+
+.social a:hover {
+    color: #a0522d;
+}
+
+.social svg {
+    width: 26px;
+    height: 26px;
+}
+
+/* =========================================
+   BOOKING FORM (inside contact page)
+   ========================================= */
+
+.booking-section {
+    margin-top: 4.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(160, 82, 45, 0.25);
+    scroll-margin-top: 1rem;
+}
+
+.booking-head {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.booking-head h1 {
+    font-family: 'Be Vietnam Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: clamp(1.1rem, 2.6vw, 1.4rem);
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #331e03;
+}
+
+.booking-sub {
+    margin-top: 0.9rem;
+    font-family: 'Be Vietnam Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #3f8a24;
+}
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.booking-art .script {
+    margin-bottom: 1rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.35;
+    color: #331e03;
+}
+
+.booking-art img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.booking-art .slogan {
+    margin-top: 1rem;
+    font-family: 'Arima', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #331e03;
+}
+
+/* Form */
+.reservation,
+.reservation * {
+    box-sizing: border-box;
+}
+
+.reservation h2 {
+    margin-bottom: 1.5rem;
+    font-family: 'Be Vietnam Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #a0522d;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem 1.75rem;
+}
+
+/* The form grid is a <fieldset>: remove its default border and padding */
+fieldset.form-grid {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    min-width: 0;
+}
+
+.field-full {
+    grid-column: 1 / -1;
+}
+
+.field {
+    display: grid;
+    grid-template-columns: 1.6rem 1fr;
+    column-gap: 0.5rem;
+    row-gap: 0.25rem;
+    align-items: center;
+}
+
+.field-icon {
+    grid-row: 1 / span 2;
+    font-size: 1.15rem;
+    text-align: center;
+    filter: sepia(1) saturate(2) brightness(0.7);
+}
+
+.field label {
+    grid-column: 2;
+    font-family: 'Be Vietnam Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #331e03;
+}
+
+.field input,
+.field select {
+    grid-column: 2;
+}
+
+.reservation input,
+.reservation select,
+.reservation textarea {
+    width: 100%;
+    padding: 0.5rem 0.65rem;
+    font-family: 'Be Vietnam Pro', 'Segoe UI', Arial, sans-serif;
+    font-size: 0.85rem;
+    color: #331e03;
+    background-color: #ffffff;
+    border: 1px solid #a0522d;
+    border-radius: 6px;
+}
+
+.reservation textarea {
+    display: block;
+    min-height: 5rem;
+    resize: vertical;
+}
+
+.reservation ::placeholder {
+    color: #8a6e5e;
+}
+
+.reservation input:focus-visible,
+.reservation select:focus-visible,
+.reservation textarea:focus-visible {
+    outline: 3px solid #d7a86e;
+    outline-offset: 2px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.form-btn {
+    padding: 0.75rem 1.9rem;
+    font-family: 'Lilex', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #a0522d;
+    border: 2px solid #a0522d;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.form-btn:hover,
+.form-btn:focus-visible {
+    background-color: #ffffff;
+    color: #a0522d;
+    transform: translateY(-3px);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    width: 100%;
+    padding: 25px 20px;
+    text-align: center;
+    background-color: #4A3026;
+    color: #FFF8EF;
+}
+
+footer p {
+    font-family: 'Lilex', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 22px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    /* Services: 2 columns, last card full width */
+    .Cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card,
+    .card:nth-child(n+4) {
+        grid-column: auto;
+        margin-top: 0;
+    }
+
+    .card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 700px) {
+    .Pawfee {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .Pawfee-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .Pawfee-text p {
+        text-align: center;
+    }
+
+    .cozy-space {
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .gallery-row {
+        gap: 4%;
+    }
+
+    .gallery-row img {
+        border-radius: 12%;
+    }
+
+    .cozy-space .tagline {
+        font-size: 1.3rem;
+    }
+
+    .story-hero {
+        height: 220px;
+    }
+
+    .story-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .story-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 40px auto;
+    }
+
+    .story-content img {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    /* Services: single column */
+    .Cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+    /* Contact + booking: single column */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-art {
+        order: 2;
+    }
+}
+
+@media (max-width: 560px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lilex:ital,wght@0,100..700;1,100..700&display=swap"
+rel="stylesheet">
+<title>Contact &amp; Booking | The Pawfee Shop</title>
+<link rel="stylesheet" href="CSS/style.css">
+
+<!-- Styles for the booking messages (added) -->
+<style>
+  .booking-status {
+    display: none;
+    margin: 16px 0 0;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .booking-status.success {
+    display: block;
+    background: #e7f6ea;
+    color: #1d5e2c;
+    border: 2px solid #1d5e2c;
+  }
+  .booking-status.error {
+    display: block;
+    background: #fdecea;
+    color: #8a1c13;
+    border: 2px solid #8a1c13;
+  }
+  .form-btn:disabled { opacity: .6; cursor: not-allowed; }
+</style>
+</head>
+
+<body>
+
+<!-- HEADER AND NAVIGATION -->
+<header>
+<div class="logo">
+<img src="images/Logo.png" alt="The Pawfee Logo">
+</div>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<main class="contact-page">
+
+<!-- CONTACT: two columns (details | pets + social) -->
+<div class="contact-grid">
+
+<!-- LEFT: CONTACT DETAILS -->
+<div class="contact-info">
+<p class="contact-book"><a href="#booking">Book Now!</a> and visit our cafe</p>
+
+<section class="contact-block">
+<h2>Visit Time Hours</h2>
+<p>Monday &ndash; Friday<br>8:00 AM &ndash; 9:00 PM</p>
+<p>Saturday &ndash; Sunday<br>10:00 AM &ndash; 12:00 PM</p>
+</section>
+
+<section class="contact-block">
+<h2>Contact Us For more inquiries</h2>
+<p>Phone: <a href="tel:091123456">091123456</a></p>
+<p>Email: <a href="mailto:hello@thecozyPawfee.com">hello@thecozyPawfee.com</a></p>
+</section>
+</div>
+
+<!-- RIGHT: INVITE, PETS IMAGE, SOCIAL -->
+<div class="contact-visual">
+<p class="contact-invite">Are you excited to relax and enjoy experiencing welcoming vibes with your adorable friendly furry friends?</p>
+<img src="Gallery Essentials/group of pets.jpeg" alt="The group of pets">
+
+<div class="social">
+<span>Follow us:</span>
+<a href="#" aria-label="Facebook">
+<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.5V13h2.8v8h3.2z"/></svg>
+</a>
+<a href="#" aria-label="Instagram">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+</a>
+</div>
+</div>
+
+</div>
+
+<!-- BOOKING FORM -->
+<section class="booking-section" id="booking">
+
+<div class="booking-head">
+<h1>Are you excited to meet your adorable friends and find a spot to enjoy a relaxing vibes?</h1>
+<p class="booking-sub">Book your cozy experience Here!</p>
+</div>
+
+<div class="booking-layout">
+
+<!-- LEFT: TAGLINE + IMAGE -->
+<aside class="booking-art">
+<p class="script">Good Coffee <br> Happy Paws <br> Fun for everyone</p>
+<img src="Gallery Essentials/Pet-cozy.webp" alt="Cozy room">
+<p class="slogan">Sip, Bite, Stay, Swag &#128062;</p>
+</aside>
+
+<!-- RIGHT: RESERVATION FORM (fixed: id added, action="#" removed) -->
+<form class="reservation" id="reservation-form" method="post" novalidate>
+<h2>Your Reservation</h2>
+
+<fieldset class="form-grid">
+<legend class="sr-only">Reservation details</legend>
+
+<div class="field">
+<span class="field-icon" aria-hidden="true">&#128100;</span>
+<label for="fullname">Full Name</label>
+<input id="fullname" name="fullname" type="text" placeholder="Enter your full name" required>
+</div>
+
+<div class="field">
+<span class="field-icon" aria-hidden="true">&#9993;&#65039;</span>
+<label for="email">Email Address</label>
+<input id="email" name="email" type="email" placeholder="Enter your email" required>
+</div>
+
+<div class="field">
+<span class="field-icon" aria-hidden="true">&#128222;</span>
+<label for="phone">Phone Number</label>
+<input id="phone" name="phone" type="tel" placeholder="09XX XXX XXXX" required>
+</div>
+
+<div class="field">
+<span class="field-icon" aria-hidden="true">&#128203;</span>
+<label for="reservation-type">Reservation Type</label>
+<select id="reservation-type" name="reservation_type" required>
+<option value="">Select an option</option>
+<option>Coffee &amp; pet time</option>
+<option>Family or friends visit</option>
+<option>Birthday or special event</option>
+</select>
+</div>
+
+<div class="field">
+<span class="field-icon" aria-hidden="true">&#128101;</span>
+<label for="guests">Number of Guests</label>
+<select id="guests" name="guests" required>
+<option value="">Select number</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7 or more</option>
+</select>
+</div>
+
+<div class="field">
+<span class="field-icon" aria-hidden="true">&#128197;</span>
+<label for="date">Date</label>
+<input id="date" name="date" type="date" required>
+</div>
+
+<div class="field">
+<span class="field-icon" aria-hidden="true">&#128339;</span>
+<label for="time">Time</label>
+<input id="time" name="time" type="time" min="08:00" max="21:00" required>
+</div>
+
+<div class="field">
+<span class="field-icon" aria-hidden="true">&#128062;</span>
+<label for="companion">Pet Companion</label>
+<select id="companion" name="companion">
+<option value="">Choose your companion</option>
+<option>Dogs</option>
+<option>Cats</option>
+<option>Rabbits</option>
+<option>Any friendly pet</option>
+</select>
+</div>
+
+<div class="field field-full">
+<span class="field-icon" aria-hidden="true">&#127968;</span>
+<label for="session">Session Type</label>
+<select id="session" name="session">
+<option value="">Type of pet session you are booking</option>
+<option>Cuddle &amp; coffee</option>
+<option>Play time</option>
+<option>Photo session</option>
+</select>
+</div>
+
+<div class="field-full">
+<label for="notes" class="sr-only">Special request or note</label>
+<textarea id="notes" name="notes" rows="3" placeholder="Let us know if you have any special request or note"></textarea>
+</div>
+
+</fieldset>
+
+<!-- Messages appear here (added) -->
+<div id="booking-status" class="booking-status" role="status" aria-live="polite"></div>
+
+<div class="form-actions">
+<button type="submit" class="form-btn" id="submit-btn">Confirm Booking</button>
+<button type="reset" class="form-btn">Reset</button>
+</div>
+</form>
+
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+<p>&copy; 2026 The Pawfee Shop. All Rights Reserved.</p>
+</footer>
+
+<!-- BOOKING SCRIPT (added) -->
+<script>
+(function () {
+  // OPTIONAL: paste your Formspree / Web3Forms endpoint here to receive
+  // bookings by email, e.g. "https://formspree.io/f/abcdwxyz"
+  // Leave it empty ("") to just show an on-page confirmation.
+  var FORM_ENDPOINT = "";
+
+  var form     = document.getElementById("reservation-form");
+  var statusEl = document.getElementById("booking-status");
+  var submitBtn = document.getElementById("submit-btn");
+  var dateInput = document.getElementById("date");
+  var timeInput = document.getElementById("time");
+
+  // Block past dates in the date picker
+  var today = new Date();
+  var yyyy = today.getFullYear();
+  var mm = String(today.getMonth() + 1).padStart(2, "0");
+  var dd = String(today.getDate()).padStart(2, "0");
+  var todayStr = yyyy + "-" + mm + "-" + dd;
+  dateInput.min = todayStr;
+
+  function show(type, msg) {
+    statusEl.className = "booking-status " + type;
+    statusEl.textContent = msg;
+    statusEl.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  function clearStatus() {
+    statusEl.className = "booking-status";
+    statusEl.textContent = "";
+  }
+
+  // Opening hours: Mon-Fri 8:00-21:00, Sat-Sun 10:00-12:00
+  function hoursFor(dateStr) {
+    var d = new Date(dateStr + "T00:00");
+    var weekend = d.getDay() === 0 || d.getDay() === 6;
+    return weekend
+      ? { open: "10:00", close: "12:00", label: "10:00 AM - 12:00 PM (Sat-Sun)" }
+      : { open: "08:00", close: "21:00", label: "8:00 AM - 9:00 PM (Mon-Fri)" };
+  }
+
+  // Update allowed time range when the date changes
+  dateInput.addEventListener("change", function () {
+    if (!dateInput.value) return;
+    var h = hoursFor(dateInput.value);
+    timeInput.min = h.open;
+    timeInput.max = h.close;
+  });
+
+  form.addEventListener("reset", clearStatus);
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    clearStatus();
+
+    // Built-in required-field / email checks
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    // Phone number: at least 7 digits
+    var phone = document.getElementById("phone").value.replace(/\D/g, "");
+    if (phone.length < 7) {
+      show("error", "Please enter a valid phone number.");
+      return;
+    }
+
+    // Date must not be in the past
+    if (dateInput.value < todayStr) {
+      show("error", "Please choose today's date or a future date.");
+      return;
+    }
+
+    // Time must be within opening hours
+    var h = hoursFor(dateInput.value);
+    if (timeInput.value < h.open || timeInput.value > h.close) {
+      show("error", "We're open " + h.label + " on that day. Please pick a time within those hours.");
+      return;
+    }
+
+    var name = document.getElementById("fullname").value.trim();
+    var successMsg = "Thank you, " + name + "! Your booking request for " +
+      dateInput.value + " at " + timeInput.value +
+      " has been received. We'll contact you to confirm.";
+
+    // No endpoint set: show confirmation only
+    if (!FORM_ENDPOINT) {
+      show("success", successMsg);
+      form.reset();
+      statusEl.className = "booking-status success";
+      statusEl.textContent = successMsg;
+      return;
+    }
+
+    // Endpoint set: send the data
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    fetch(FORM_ENDPOINT, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { "Accept": "application/json" }
+    })
+    .then(function (res) {
+      if (!res.ok) throw new Error("Request failed");
+      form.reset();
+      show("success", successMsg);
+    })
+    .catch(function () {
+      show("error", "Sorry, something went wrong. Please try again or call us.");
+    })
+    .finally(function () {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Confirm Booking";
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
